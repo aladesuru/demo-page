@@ -1,0 +1,627 @@
+
+/* ==========================================================================
+   Element base styles: opinionated defaults
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers and prevent padding to increase width (opinionated).
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/**
+ * web font
+ */
+
+ @font-face {
+    font-family: calibre;
+    src: url(../fonts/calibre/calibre-regular.otf);
+ }
+
+ @font-face {
+    font-family: calibre-medium;
+    src: url(../fonts/calibre/calibre-medium.otf);
+ }
+
+ @font-face {
+    font-family: futura;
+    src: url(../fonts/futura-bk-bt/futura-bk-bt-book/futura-bookbt.ttf);
+ }
+
+ body {
+   font-family: calibre , sans-serif;
+   font-size: 100%;
+   background-color: #fff;
+ }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+aside,
+header,
+nav,
+section {
+  display: block;
+  /*outline: 1px solid green;*/
+}
+
+section,
+aside {
+  margin: 20px 0;
+}
+
+header {
+  box-shadow: 0 3px 3px rgba(238,238,238, .5);
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+p {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  padding: 0 1%;
+}
+
+ul{
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: calibre-medium , sans-serif;
+}
+
+h1,
+h2 {
+  color: #044b35;
+  letter-spacing: 1.2px;
+}
+
+@media all and (max-width: 768px)
+{
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.25em;
+  }
+  h3 {
+    font-size: 0.9375em;
+  }
+}
+
+@media all and (min-width: 769px)
+{
+  h1 {
+    font-size: 3.375em; /* 54px/16px */
+  }
+  h2 {
+    font-size: 2.8125em; /* 45px/16px */
+  }
+  h3 {
+    font-size: 1em; /* 16px/16px */
+  }
+}
+
+
+/* ==========================================================================
+   container style 
+   ========================================================================== */
+
+/* container base style
+   ========================================================================== */
+
+.containter {
+  width: 96%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+/*
+* container media query section
+*/
+
+@media all and (min-width: 1250px)
+{
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+/* navigation base style
+   ========================================================================== */
+
+ nav {
+  margin: 0px 0 50px 0;
+ }
+
+ nav .menu-container {
+  background-color: #044b35;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  display: none;
+}
+
+ nav .menu{
+  cursor: pointer;
+ }
+
+ nav input {
+  display: none;
+ }
+
+  nav ul li,
+  nav li a {
+  display: block;
+  width: 100%;
+ }
+
+ nav li a {
+  color: #044b35;
+  font-weight: bolder;
+  font-family: calibre-medium , sans-serif;
+  font-size: .75em;
+  padding: 10px;
+ }
+
+ nav ul li a:link,
+ nav ul li a:visited,
+ nav ul li a:active {
+  color: #044b35;
+ }
+
+  nav .icon {
+    max-width: 20px;
+    height: auto;
+  }
+
+
+/* navigation media query section
+   ========================================================================== */
+
+@media all and (max-width: 768px)
+{
+  nav .menu-container {
+    display: block;
+  }
+
+  nav ul {
+    border: 1px solid #1db689;
+    margin: 0 1%;
+  }
+
+   nav ul li {
+    border-bottom: 1px solid #2afbca;
+   }
+
+   nav ul li:last-child {
+    border: none;
+   }
+
+   nav li a:hover{
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #2afbca;
+   }
+
+   nav ul {
+    max-height: 0;
+    overflow: auto;
+    transition: all .65s cubic-bezier(.5,-0.14,.47,1.15);
+    transform: scale(.5);
+   }
+
+   nav #menu:checked ~ ul {
+    max-height: 30em;
+    transform: scale(1);
+   }
+}
+
+@media all and (min-width: 769px)
+{
+   header {
+      margin-top: 30px;
+      margin-left: 20px;
+   }
+
+   nav ul li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 9.11111111%;
+    position: relative;
+    text-align: center;
+   } 
+
+   nav ul li:first-child {
+    width: 5%;
+   }
+
+   nav li a::after {
+    content:  " ";
+    display: block;
+    width: 30%;
+    margin: auto;
+    border: 1px solid #2afbca;
+    position: absolute;
+    bottom: 10px;
+    left: 35%;
+   }
+
+  nav li span {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 1250px)
+{
+   nav ul li:first-child {
+    width: 3%;
+   }
+}
+
+/* ==========================================================================
+   Main content style
+   ========================================================================== */
+
+   /* general style section
+   ========================================================================== */
+   .hero-area ,
+   .form  {
+    width: 97%;
+    margin: auto;
+   }
+
+   .title {
+    font-family: calibre , sans-serif;
+   }
+
+  .group-content {
+    background-color: #f5f5f5;
+    width: 88%;
+    color: #777;
+  }
+
+  .group-content p {
+    color: #333;
+    padding-top: 2px;
+    font-weight: bolder;
+  }
+
+  .group-content .title {
+    font-size: 0.75em;
+  }
+
+  .innovation {
+    background-image: linear-gradient(#7d7ccf , #1db6a9  , #2afbca);
+    color: #fff;
+    box-shadow: 1px 1px  15px rgba(0,0,0, .5);
+    border: 0 !important;
+  }
+
+  
+/*
+* form styling
+*/
+   .inline-form input[type="text"] {
+    margin: 10px 0;
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #2afbca;
+    color: #044b35;
+   }
+
+   .form-group {
+     padding: 10px 0%;
+     position: relative;
+     width: 100%;
+   }
+
+   .form-group label {
+    font-family: calibre , sans-serif;
+   }
+
+   .form-group span{
+    right: 10px;
+    bottom: 45px;
+    z-index: 100;
+   }
+
+   .dropdown-menu {
+    background-color: #fff;
+    box-shadow: 3px 3px 5px rgba(238 ,238,238, .5);
+    width: 45%;
+    text-align: right;
+    left: 60px;
+    z-index: 1000;
+    max-height: 0;
+    overflow: auto;
+   }
+
+   .dropdown-menu ul li {
+    padding: 5px 1%;
+    font-size: .67em;
+    box-shadow: 0px 2px 10px rgba(238 ,238,238, .5);
+    border-bottom: 1px solid rgba(238,238,238,.5);
+    cursor: pointer;
+    text-align: center;
+   }
+
+   .dropdown-menu ul li:hover {
+    color: #2afbca;
+    font-weight: bolder;
+   }
+
+   .dropdown-menu::before {
+    content: " ";
+    display: block;
+    width: 0px;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f5f5f5;
+    position: relative;
+    left: calc(100% - 19px);
+    top: 0;
+   }
+
+   .datalist {
+    cursor: pointer;
+   }
+
+   /* media query
+   ========================================================================== */
+   @media all and (max-width: 768px)
+   {
+      .dropdown-menu {
+        width: 40%;
+        left: calc(100% - 40%);
+     }
+   }
+
+   @media all and (min-width: 769px)
+   {
+      .form-group {
+        width: 21%;
+        margin-right: 2.2%;
+      }
+
+      .form-group label{
+        font-size: 18px;
+      }
+
+      .inline-form input[type="text"] {
+        font-size: 20px;
+        width: 70%;
+      }
+
+      .form-group span {
+        right: calc(100% - 70%);
+     }
+
+     .sqm span {
+        right: calc(100% - 80%);
+     }
+
+   }
+
+   @media all and (min-width: 1000px)
+   {
+     .form-group {
+        width: 22%;
+      }
+   }
+
+   @media all and (min-width: 1200px)
+   {
+     .form-group {
+        width: 22.5%;
+      }
+   }
+/*
+* grid styling
+*/
+
+  .row{
+    padding: 15px 0;
+    margin: 10px 0;
+    /*outline: 1px solid red;*/
+  }
+  .col {
+    padding: 10px 0;
+    margin:  10px 0;
+  }
+
+  @media all and (min-width: 769px)
+  {
+    .col {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+/*
+* panel styling
+*/
+  
+ @media all and (max-width: 768px)
+ {
+  .group-content {
+    width: 100%;
+  }
+ }
+
+ @media all and (min-width: 769px)
+ {
+  .left-panel,
+   .right-panel {
+    display: inline-block;
+    vertical-align: top;
+   }
+
+  .left-panel {
+    width: 70%;
+   }
+   .right-panel {
+    width: 29%;
+    margin-top: 110px;
+   }
+ }
+
+
+ /*
+* benefit styling
+*/
+
+  .benefit {
+    margin-top: -50px;
+  }
+
+  .benefit li::before {
+    content: " ";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #777;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  @media all and (min-width: 769px)
+  {
+    .benefit li {
+      width: 45%;
+      padding: 0;
+    }
+  }
+
+ /*
+*  slider styling
+*/
+
+  .slider-container {
+    margin: 10px 0;
+  }
+
+  .slider {
+    height: 15px;
+    width: 100%;
+    background-image: linear-gradient(90deg , #7d7ccf , #1db6a9  , #2afbca);
+    border-radius: 100px;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .slider span {
+    width: 30px;
+    height: 30px;
+    border: 5px solid #fff;
+    border-radius: 100%;
+    background-color: #7d7ccf ;
+    top: -10px;
+    left: calc(50% - 10px);
+  }
+
+  .slider-2 span {
+    left: calc(100% - 70px);
+  }
+
+  .slider-3 span {
+    left: calc(100% - 80%);
+  }
+
+  .slider-text {
+    padding: 10px 0;
+  }
+
+  .slider-text span {
+    width: 25%;
+  }
+
+  .slider-text span:last-child {
+    position: relative;
+    left: 50%;
+  }
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+   .displayblock,
+   .form-control {
+    display: block;
+    width: 100%;
+   }
+
+   .displayinline{
+    display: inline-block;
+    vertical-align: top;
+   }
+
+   .center-text {
+    text-align: center;
+   }
+
+   .p-font {
+    font-family: futura;
+    font-size: 1.125em;
+   }
+
+   .postion-absolute {
+    position: absolute;
+   }
+
+   .card {
+    border:1px solid #2afbca;
+    border-radius: 5px;
+    padding: 10px;
+   }
+
+   @media all and (min-width: 769px)
+   {
+      .card {
+        width: 40%;
+        font-size: .75em;
+        margin-right: 5%;
+      }
+
+   }
+
+   @media all and (min-width: 1200px)
+   {
+      .card {
+        width: 20%;
+        margin-right: 2%;
+      }
+   }
+

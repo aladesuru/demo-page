@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>select arrowPINK</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Opportunity-indicator-1" transform="translate(-1303.000000, -356.000000)" stroke="#00D2A0" stroke-width="1.2">
+            <g id="select-arrowPINK" transform="translate(1311.500000, 364.500000) rotate(-270.000000) translate(-1311.500000, -364.500000) translate(1304.000000, 357.000000)">
+                <g id="select-arrow">
+                    <g id="open_icon" transform="translate(7.500000, 7.500000) scale(1, -1) rotate(-90.000000) translate(-7.500000, -7.500000) ">
+                        <g id="Group-2">
+                            <circle id="Oval-2" cx="7.5" cy="7.5" r="7.5"></circle>
+                        </g>
+                        <g id="Group" transform="translate(5.982843, 8.241421) scale(1, -1) rotate(-45.000000) translate(-5.982843, -8.241421) translate(2.982843, 7.241421)" stroke-linecap="square">
+                            <path d="M0.0602434077,0.9 L5.34457414,0.9" id="Line-2"></path>
+                        </g>
+                        <g id="Group" transform="translate(9.017157, 8.241421) scale(-1, -1) rotate(-45.000000) translate(-9.017157, -8.241421) translate(6.017157, 7.241421)" stroke-linecap="square">
+                            <path d="M0.0602434077,0.9 L5.34457414,0.9" id="Line-2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
