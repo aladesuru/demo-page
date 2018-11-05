@@ -331,7 +331,6 @@ h2 {
     border: 0 !important;
   }
 
-  
 /*
 * form styling
 */
@@ -448,9 +447,11 @@ h2 {
      .form-group {
         width: 22.5%;
       }
-
-      .dropdown-menu{
+     .dropdown-menu{
         left: 100px;
+     }
+     .sqm span {
+        right: calc(100% - 75%);
      }
    }
 
@@ -458,7 +459,6 @@ h2 {
 /*
 * grid styling
 */
-
   .row{
     padding: 15px 0;
     margin: 10px 0;
