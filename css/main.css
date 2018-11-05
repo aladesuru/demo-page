@@ -53,7 +53,6 @@ header,
 nav,
 section {
   display: block;
-  /*outline: 1px solid green;*/
 }
 
 section,
@@ -468,8 +467,8 @@ h2 {
   .row{
     padding: 15px 0;
     margin: 10px 0;
-    /*outline: 1px solid red;*/
   }
+
   .col {
     padding: 10px 0;
     margin:  10px 0;
@@ -486,7 +485,6 @@ h2 {
 /*
 * panel styling
 */
-  
  @media all and (max-width: 768px)
  {
   .group-content {
