@@ -20,7 +20,7 @@
       <![endif]-->
 
       <header>
-        <nav>
+        <nav class="">
           <input type="checkbox" id="menu" />
           <div class="menu-container">
             <label for="menu" class="menu">
@@ -28,7 +28,7 @@
             </label>
           </div>
 
-          <ul>
+          <ul id="main-nav">
             <li>
               <a href="#">
                 <img class="icon home-icon" src="img/icons/home.svg" />
@@ -73,10 +73,10 @@
                 <div><label>Anticipated Headcount</label></div>
               </div>
               <div class="form-group displayinline datalist">
-                <input type="text"  class="form-control">
-                <span class="postion-absolute"><img  class="icon" src="img/icons/select-arrow.svg" /></span>
-                <div class="postion-absolute dropdown-menu">
-                  <ul>
+                <input type="text"  class="form-control" id="region">
+                <span class="postion-absolute" id="dropdown-menu-icon"><img  class="icon" src="img/icons/select-arrow.svg" /></span>
+                <div class="postion-absolute dropdown-menu" id="dropdown-menu">
+                  <ul id="dropdown-list">
                     <li>NA</li>
                     <li>LATAM</li>
                     <li>EMEA</li>
@@ -188,6 +188,6 @@
         <!-- end of sidebar -->
       </article>
       
-      <!-- <script src="js/main.js"></script> -->
+      <script src="js/main.js"></script>
     </body>
 </html>
