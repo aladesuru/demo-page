@@ -340,6 +340,7 @@ h2 {
     outline: 0;
     border-bottom: 1px solid #2afbca;
     color: #044b35;
+    border-radius: 0;
    }
 
    .form-group {
@@ -357,7 +358,7 @@ h2 {
     bottom: 45px;
     z-index: 100;
    }
-   
+
    .form-control {
     display: block;
     width: 100%;
