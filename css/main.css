@@ -357,6 +357,11 @@ h2 {
     bottom: 45px;
     z-index: 100;
    }
+   
+   .form-control {
+    display: block;
+    width: 100%;
+   }
 
    .dropdown-menu {
     background-color: #fff;
@@ -585,8 +590,7 @@ h2 {
    Helper classes
    ========================================================================== */
 
-   .displayblock,
-   .form-control {
+   .displayblock {
     display: block;
     width: 100%;
    }
