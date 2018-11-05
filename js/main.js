@@ -1,13 +1,9 @@
 /* ==========================================================================
-  	Element reference
+  	Element global reference
    ========================================================================== */
-
-  var mainNav = document.getElementById("main-nav");
-  var region = document.getElementById("region");
-  var dropDownIcon = document.getElementById("dropdown-menu-icon")
+  var dropDownIcon = document.getElementById("dropdown-menu-icon");
   var dropDownMenu = document.getElementById("dropdown-menu");
-  var dropDownList = document.getElementById("dropdown-list");
-
+  var menuList = document.getElementById("menu-list");
 /* ==========================================================================
   	Cross browser event handler
    ========================================================================== */
@@ -41,11 +37,12 @@
 
    }
 
-
 /* ==========================================================================
    event Handlers
    ========================================================================== */
-
+/*
+* toggle dropdown menu
+*/
    const OnclickDropDownIcon = () => {
     if (dropDownMenu.style.maxHeight ==  "200px") {
        dropDownMenu.style.maxHeight = 0 + "px";
@@ -56,10 +53,16 @@
 
    EventUtility.addHandler(dropDownIcon , "click" , OnclickDropDownIcon);
 
-   const onClickDropDownList = (event) => {
-     event = EventUtility.getTarget(event);
-    var target = EventUtility.getTarget(event);
-    console.log(dropDownList);
+/*
+* Extract dropdown menu item and set is value to region
+*/
+   const onClickDropDownList = event => {
+    let region = document.getElementById("region");
+     event = EventUtility.getEvent(event);
+    let target = EventUtility.getTarget(event);
+    let targetValue = event.target.innerHTML;
+    region.value = targetValue;
+    dropDownMenu.style.maxHeight = 0 + "px";
    }
 
-   EventUtility.addHandler(dropDownList , "click" , onClickDropDownList);
+EventUtility.addHandler(menuList , "click" , onClickDropDownList);

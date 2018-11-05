@@ -268,7 +268,7 @@ h2 {
     width: 5%;
    }
 
-   nav li a::after {
+   .active-link::after {
     content:  " ";
     display: block;
     width: 30%;
@@ -367,7 +367,7 @@ h2 {
     left: 60px;
     z-index: 1000;
     max-height: 0px;
-    overflow: auto;
+    overflow: hidden;
     transition: max-height .65s cubic-bezier(.5,-0.14,.47,1.15);
    }
 
@@ -448,6 +448,10 @@ h2 {
      .form-group {
         width: 22.5%;
       }
+
+      .dropdown-menu{
+        left: 100px;
+     }
    }
 
 
