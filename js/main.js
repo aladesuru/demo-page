@@ -38,7 +38,7 @@
    }
 
 /* ==========================================================================
-   event Handlers
+   Event Handlers
    ========================================================================== */
 /*
 * toggle dropdown menu
@@ -54,7 +54,7 @@
    EventUtility.addHandler(dropDownIcon , "click" , OnclickDropDownIcon);
 
 /*
-* Extract dropdown menu item and set is value to region
+* Get the value of menu list and set it to region field value
 */
    const onClickDropDownList = event => {
     let region = document.getElementById("region");
