@@ -58,7 +58,6 @@ html {
 /**
  * Add the correct display in IE 9-.
  */
-
 aside,
 header,
 nav,
@@ -138,15 +137,22 @@ h2 {
   }
 }
 
-
 /* ==========================================================================
    container style 
    ========================================================================== */
 
 /* container base style
    ========================================================================== */
+@keyframes pop-out-effect{
+  0% {
+    transform: scale(.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-.containter {
+.container {
   width: 96%;
   margin: 20px auto;
   padding: 10px;
@@ -155,11 +161,10 @@ h2 {
 /*
 * container media query section
 */
-
-@media all and (min-width: 1250px)
-{
+@media all and (min-width: 769px){
   .container {
-    max-width: 1140px;
+    transition: transform .65s;
+    animation: pop-out-effect .65s;
   }
 }
 
@@ -213,7 +218,6 @@ h2 {
 
 /* navigation media query section
    ========================================================================== */
-
 @media all and (max-width: 768px)
 {
   nav .menu-container {
@@ -335,6 +339,7 @@ h2 {
   }
 
   .innovation {
+    background-color: #7d7ccf;
     background-image: linear-gradient(#7d7ccf , #1db6a9  , #2afbca);
     color: #fff;
     box-shadow: 1px 1px  15px rgba(0,0,0, .5);
@@ -553,7 +558,6 @@ h2 {
     vertical-align: top;
   }
 
-
   @media all and (min-width: 769px)
   {
     .benefit li {
@@ -570,7 +574,6 @@ h2 {
  /*
 *  slider styling
 */
-
   .slider-container {
     margin: 10px 0;
   }
@@ -578,6 +581,7 @@ h2 {
   .slider {
     height: 15px;
     width: 100%;
+    background-color: #2afbca;
     background-image: linear-gradient(90deg , #7d7ccf , #1db6a9  , #2afbca);
     border-radius: 100px;
     margin-top: 10px;
@@ -614,7 +618,6 @@ h2 {
     position: relative;
     left: 50%;
   }
-
 
 /* ==========================================================================
    Helper classes
